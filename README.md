@@ -62,11 +62,6 @@ This network enforces **strict firewall rules** to ensure security and VLAN segm
     <td><img src="https://imgur.com/RpbC73h.png" height="100%" width="100%" alt="UniFi Cameras"/></td>
   </tr>
   <tr>
-    <td align="center" colspan="2"><b>NAS</b></td>
-  </tr>
-  <tr>
-    <td align="center" colspan="2"><img src="https://imgur.com/D0IyJud" height="100%" width="100%" alt="NAS"/></td>
-  </tr>
 </table>
 
 ## 🔮 Future Improvements
