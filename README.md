@@ -72,8 +72,5 @@ This network enforces **strict firewall rules** to ensure security and VLAN segm
 
 ---
 
-### 🚀 About This Project
-This project is part of my **GitHub portfolio** showcasing **network administration skills**. It is structured for **resume and job applications** in system administration and cybersecurity. 
-
 👉 **GitHub Profile:** [github.com/JoshChristman](https://github.com/JoshChristman)  
 👉 **LinkedIn:** [linkedin.com/in/Josh-Christman](https://www.linkedin.com/in/Josh-Christman)
