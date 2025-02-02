@@ -43,20 +43,31 @@ This network enforces **strict firewall rules** to ensure security and VLAN segm
 | **The_Mad_Ping** | Admin & Default Network | Full Access |
 
 ## 🛠️ Hardware Used
-**Gateway:** UniFi Cloud Gateway Max  
-![UniFi Gateway](https://imgur.com/dukUWK0.png)
-
-**Switch:** UniFi Switch Ultra 60W  
-![UniFi POE Switch](https://imgur.com/RLbTTHy.png)
-
-**Access Point:** UniFi U6 Plus AP  
-![UniFi AP](https://imgur.com/tapENkg.png)
-
-**Security Cameras:** UniFi G5 Turret Ultra (x2)  
-![UniFi Cameras](https://imgur.com/RpbC73h.png)
-
-**NAS:** Custom NAS for Media & Backup  
-![NAS](https://imgur.com/D0IyJud)
+### Hardware Images:
+<table>
+  <tr>
+    <td align="center"><b>Gateway</b></td>
+    <td align="center"><b>Switch</b></td>
+  </tr>
+  <tr>
+    <td><img src="https://imgur.com/dukUWK0.png" height="100%" width="100%" alt="UniFi Gateway"/></td>
+    <td><img src="https://imgur.com/RLbTTHy.png" height="100%" width="100%" alt="UniFi POE Switch"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Access Point</b></td>
+    <td align="center"><b>Security Cameras</b></td>
+  </tr>
+  <tr>
+    <td><img src="https://imgur.com/tapENkg.png" height="100%" width="100%" alt="UniFi AP"/></td>
+    <td><img src="https://imgur.com/RpbC73h.png" height="100%" width="100%" alt="UniFi Cameras"/></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><b>NAS</b></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="https://imgur.com/D0IyJud" height="100%" width="100%" alt="NAS"/></td>
+  </tr>
+</table>
 
 ## 🔮 Future Improvements
 - **Implement VLAN-Specific Bandwidth Controls** to prevent congestion
