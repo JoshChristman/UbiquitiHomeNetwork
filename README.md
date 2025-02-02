@@ -1,58 +1,73 @@
-# Ubiquiti Home Network Setup
+# 🏠 Ubiquiti Home Network Project
 
-**Status**: *Documentation in Progress* - **COMING SOON!**
+## 📌 Overview
+This project documents the setup of a **secure and high-performance home network** using **Ubiquiti UniFi** hardware. The network is segmented using VLANs for optimized security and performance, with IDS/IPS enabled. The setup also integrates **a NAS for media storage**, **security cameras**, and **a guest network with a captive portal**.
+
+## 📸 Installed Networking Hardware
+The following image showcases the installed networking hardware, including **Starlink, UniFi Cloud Gateway Max, Switch Ultra 60W, Surge Protector, and U6 Plus AP**:
+
+![Installed Networking Hardware](https://imgur.com/lbD3BSm.png)
+
+## 🌐 Network Topology
+The following diagram represents the **UniFi Network Topology** as displayed in the GUI, showing all **UniFi devices, NAS, and household clients**:
+
+![Network Topology](https://imgur.com/MEX76hq.png)
+
+## 🔥 Firewall Rules
+This network enforces **strict firewall rules** to ensure security and VLAN segmentation.
+
+### ❌ Block Rules
+- **Block Inter-VLAN Traffic** (except for specific allow rules)
+- **Block Nights_Watch (Cameras) from Internet & VLANs**
+- **Block Guest VLAN from accessing internal networks**
+- **Block IoT VLAN (WiFi_Walkers) from internal networks except NAS (10.25.1.10)**
+- **Block Unauthorized Traffic**
+
+### ✅ Allow Rules
+- **Allow The_Mad_Ping (Admin) to All VLANs**
+- **Allow Wildlings_Net to WiFi_Walkers** (but **not** The_Mad_Ping)
+- **Allow Guest VLAN to Internet (Captive Portal Authentication Required)**
+- **Allow IoT VLAN to access NAS (10.25.1.10) on media ports only**
+- **Allow VPN to access specific VLANs (Admin, Home Lab)**
+
+### 🖼️ Screenshot of Firewall Rules
+![Firewall Rules](https://imgur.com/1OrmYJh.png)
+
+## 🔄 VLAN Breakdown
+| VLAN Name      | Purpose                        | Restrictions |
+|---------------|--------------------------------|--------------|
+| **Nights_Watch** | Security Cameras Only       | No Internet, No VLAN Access |
+| **Pings_Landing** | Guest Network (Captive Portal) | No Inter-VLAN Access |
+| **WiFi_Walkers** | IoT Devices (Smart TVs, etc.) | Only access NAS (10.25.1.10) |
+| **Wildlings_Net** | Kids & Family Devices | No Admin Access, Limited IoT Access |
+| **The_Mad_Ping** | Admin & Default Network | Full Access |
+
+## 🛠️ Hardware Used
+**Gateway:** UniFi Cloud Gateway Max  
+![UniFi Gateway](https://imgur.com/dukUWK0.png)
+
+**Switch:** UniFi Switch Ultra 60W  
+![UniFi POE Switch](https://imgur.com/RLbTTHy.png)
+
+**Access Point:** UniFi U6 Plus AP  
+![UniFi AP](https://imgur.com/tapENkg.png)
+
+**Security Cameras:** UniFi G5 Turret Ultra (x2)  
+![UniFi Cameras](https://imgur.com/RpbC73h.png)
+
+**NAS:** Custom NAS for Media & Backup  
+![NAS](https://imgur.com/D0IyJud)
+
+## 🔮 Future Improvements
+- **Implement VLAN-Specific Bandwidth Controls** to prevent congestion
+- **Enhance Logging & Monitoring** with better analytics tools
+- **Fine-tune IDS/IPS policies** to reduce false positives
+- **Automate Network Backups** to improve reliability
 
 ---
 
-## ⚙️ Technologies and Utilities Used
+### 🚀 About This Project
+This project is part of my **GitHub portfolio** showcasing **network administration skills**. It is structured for **resume and job applications** in system administration and cybersecurity. 
 
-- **UniFi Network** - Core network configuration and management
-- **UniFi Protect** - Video surveillance and security monitoring
-- **VLANs** - Network segmentation for enhanced security
-- **Firewall** - Network security management
-- **IDS/IPS** - Intrusion Detection and Prevention for threat management
-
----
-
-## 📄 Project Overview
-
-This advanced home networking project utilizes a **UniFi Gateway Max**, **Switch Ultra 60W**, **U6 Plus AP**, and **two 5G Turret Ultra cameras** to build a secure, high-performance network optimized for both home and small office needs. Five VLANs—**Nights_Watch** for security cameras, **Pings_Landing** for guest access, **WiFi_Walkers** for IoT devices, **Wildlings_Net** for kids and family, and **The_Mad_Ping** for admin and personal devices—ensure organized traffic management, enhanced security, and dedicated SSIDs for each network segment.
-
-Integrated **IDS/IPS** offers real-time monitoring and threat prevention, while **PoE** on the **Switch Ultra 60W** supports efficient device power management. The cameras provide high-resolution video feeds, and the network’s configuration, along with this documentation, will be made publicly available to showcase expertise in network setup, security, and documentation.
-
----
-
-## 📸 Hardware Components
-
-### UniFi Gateway Max
-Central router and firewall, enabling robust network routing, security management, and VLAN configuration.
-<p align="center">
-  <img src="https://i.imgur.com/dukUWK0.png" alt="UniFi Gateway" width="300">
-</p>
-
----
-
-### UniFi Switch Ultra 60W
-Power-over-Ethernet (PoE) switch, providing power and connectivity to various network devices while supporting VLAN segmentation.
-<p align="center">
-  <img src="https://i.imgur.com/RLbTTHy.png" alt="UniFi POE Switch" width="300">
-</p>
-
----
-
-### UniFi U6 Plus Access Point
-High-performance access point with dedicated SSIDs for each VLAN, ensuring strong and secure wireless connectivity.
-<p align="center">
-  <img src="https://i.imgur.com/tapENkg.png" alt="UniFi AP" width="300">
-</p>
-
----
-
-### UniFi G5 Turret Ultra Cameras
-5G-enabled, high-resolution security cameras integrated with the **Nights_Watch** VLAN for real-time surveillance and monitoring.
-<p align="center">
-  <img src="https://i.imgur.com/RpbC73h.png" alt="UniFi Cameras" width="300">
-</p>
-
----
-
+👉 **GitHub Profile:** [github.com/JoshChristman](https://github.com/JoshChristman)  
+👉 **LinkedIn:** [linkedin.com/in/Josh-Christman](https://www.linkedin.com/in/Josh-Christman)
